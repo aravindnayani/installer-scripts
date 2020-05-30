@@ -1,6 +1,6 @@
 #!/bin/sh
 # installer.sh will install the necessary packages for camera operations and perform some basic functions
-# Rasbian OS 05/2020 on RPI4-4GB
+# Installing OpenCV 4 on Rasbian OS 05/2020 for RPI4-4GB
 
 # remove unwanted packages
 sudo apt-get purge wolfram-engine -y && \
