@@ -55,10 +55,22 @@ sudo pip install virtualenv virtualenvwrapper -y && \
 # open up your ~/.bashrc  file:
 nano ~/.bashrc
 
-# and append the following lines to the bottom of the file:
+# append the following lines to the bottom of the file:
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 source /usr/local/bin/virtualenvwrapper.sh
+export VIRTUALENVWRAPPER_ENV_BIN_DIR=bin
+# ctrl+x, y, enter to save
+
+# create a virtual environment
+mkvirtualenv cv -p python3
+
+# install picamera API
+pip install "picamera[array]"
+
+## easy method to install openCV 4
+pip install opencv-contrib-python==4.1.0.25
 
 # activate the virtualenv 'cv' - cv is user created virtualenv
 >> source /home/pi/.virtualenvs/cv/bin/activate
